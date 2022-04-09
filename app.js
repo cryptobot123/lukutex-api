@@ -5,27 +5,27 @@ const PORT = process.env.PORT || 4000;
 const cors = require("cors");
 
 // Airdrop
-const airdropRouter = require("./src/airdrop/router/airdrop");
-const claimRouter = require("./src/airdrop/router/claim");
-const blockListRouter = require("./src/airdrop/router/blockList");
-const distributeRouter = require("./src/airdrop/router/distribute");
+//const airdropRouter = require("./src/airdrop/router/airdrop");
+//const claimRouter = require("./src/airdrop/router/claim");
+//const blockListRouter = require("./src/airdrop/router/blockList");
+//const distributeRouter = require("./src/airdrop/router/distribute");
 
 // ETH Withdraw
-const ethWithdrawRouter = require("./src/eth-withdraw/router/withdraw");
+//const ethWithdrawRouter = require("./src/eth-withdraw/router/withdraw");
 
 // IEO
-const ieoRouter = require("./src/ieo/router/ieo");
+//const ieoRouter = require("./src/ieo/router/ieo");
 
 // Homepage Event
 const eventsRouter = require("./src/events/router/events");
 
 // Trading Competition
-const competitionsRouter = require("./src/trading-competition/router/competitions");
-const ranksRouter = require("./src/trading-competition/router/ranks");
-const distributeCompetitionRouter = require("./src/trading-competition/router/distribute");
+//const competitionsRouter = require("./src/trading-competition/router/competitions");
+//const ranksRouter = require("./src/trading-competition/router/ranks");
+//const distributeCompetitionRouter = require("./src/trading-competition/router/distribute");
 
 // Lunar Game
-const lunarGameRouter = require('./src/lunar-game/router/lunar_game');
+//const lunarGameRouter = require('./src/lunar-game/router/lunar_game');
 
 app.use(bodyParser.json({ limit: "10mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
@@ -41,27 +41,27 @@ app.use((req, res, next) => {
 });
 
 // Airdrop
-app.use("/airdrop", airdropRouter);
-app.use("/claim", claimRouter);
-app.use("/block", blockListRouter);
-app.use("/distribute", distributeRouter);
+//app.use("/airdrop", airdropRouter);
+//app.use("/claim", claimRouter);
+//app.use("/block", blockListRouter);
+//app.use("/distribute", distributeRouter);
 
 // ETH Withdraw
-app.use("/withdraw", ethWithdrawRouter);
+//app.use("/withdraw", ethWithdrawRouter);
 
 // IEO
-app.use("/ieo", ieoRouter);
+//app.use("/ieo", ieoRouter);
 
 // Homepage Events
 app.use('/events', eventsRouter);
 
 //Trading Competition
-app.use('/competitions', competitionsRouter);
-app.use('/ranks', ranksRouter);
-app.use("/distribute", distributeCompetitionRouter);
+//app.use('/competitions', competitionsRouter);
+//app.use('/ranks', ranksRouter);
+//app.use("/distribute", distributeCompetitionRouter);
 
 // //Lunar Game
-app.use('/lunar-game', lunarGameRouter);
+//app.use('/lunar-game', lunarGameRouter);
 
 
 
